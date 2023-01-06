@@ -12,7 +12,7 @@
           preload
           provider="contentful"
           :src="gallery.fields.featureImage.fields.file.url"
-          sizes="sm:100vw lg:848px"
+          sizes="sm:100vw md:848px"
           width="848"
           height="1242"
         />
