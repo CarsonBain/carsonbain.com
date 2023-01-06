@@ -22,4 +22,9 @@ export default defineNuxtConfig({
       contentfulAccessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
     },
   },
+  image: {
+    contentful: {
+      baseUrl: 'https://cdn.contentful.com',
+    },
+  },
 });

@@ -34,17 +34,3 @@
     </div>
   </div>
 </template>
-<script>
-export default {
-  setup() {
-    const nuxtApp = useNuxtApp();
-    onMounted(() => {
-      // TODO: what's this error about with unsafe headers? https://github.com/contentful/contentful.js/issues/422
-      nuxtApp.$contentful
-        .getEntries()
-        .then((response) => console.log(response))
-        .catch(console.error);
-    });
-  },
-};
-</script>
