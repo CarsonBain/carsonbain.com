@@ -3,7 +3,7 @@
     <NuxtLink v-for="index in 4" class="relative group flex" :key="index" :to="`/galleries/${index}`">
       <div class="flex flex-col">
         <!-- TODO: use nuxt-picture instead? -->
-        <NuxtImg src="/test.jpg" />
+        <NuxtImg src="/test.jpg" width="848" />
         <div class="text-black text-2xl md:text-3xl font-semibold mt-6">— Mallorca, Spain</div>
       </div>
     </NuxtLink>
