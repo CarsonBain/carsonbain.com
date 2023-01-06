@@ -8,7 +8,11 @@
     >
       <div class="flex flex-col">
         <!-- TODO: use nuxt-picture instead? -->
-        <NuxtPicture provider="contentful" :src="gallery.fields.featureImage.fields.file.url" width="848" />
+        <NuxtPicture
+          provider="contentful"
+          :src="gallery.fields.featureImage.fields.file.url"
+          sizes="sm:100vw md:848px"
+        />
         <div class="text-black text-2xl md:text-3xl font-semibold mt-6">— {{ gallery.fields.title }}</div>
       </div>
     </NuxtLink>
