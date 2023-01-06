@@ -16,4 +16,10 @@ export default defineNuxtConfig({
     },
   },
   modules: ['@nuxt/image-edge'],
+  runtimeConfig: {
+    public: {
+      contentfulSpaceId: process.env.CONTENTFUL_SPACE_ID,
+      contentfulAccessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
+    },
+  },
 });
