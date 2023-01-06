@@ -15,6 +15,7 @@
           sizes="sm:100vw md:848px"
           width="848"
           height="1242"
+          quality="100"
         />
         <div class="text-black text-2xl md:text-3xl font-semibold mt-6">— {{ gallery.fields.title }}</div>
       </div>
