@@ -3,7 +3,7 @@
     <NuxtLink v-for="index in 4" class="flex flex-col" :key="index" :to="`/galleries/${index}`">
       <!-- TODO: use nuxt-picture instead? -->
       <!-- TODO: add alts -->
-      <NuxtImg loading="lazy" src="/test.jpg" />
+      <NuxtPicture loading="lazy" src="/test.jpg" />
     </NuxtLink>
   </div>
 </template>
