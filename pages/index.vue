@@ -13,6 +13,8 @@
           provider="contentful"
           :src="gallery.fields.featureImage.fields.file.url"
           sizes="sm:100vw lg:848px"
+          width="848"
+          height="1242"
         />
         <div class="text-black text-2xl md:text-3xl font-semibold mt-6">— {{ gallery.fields.title }}</div>
       </div>
