@@ -1,6 +1,6 @@
 <template>
   <div class="grid md:grid-cols-2 gap-12">
-    <NuxtLink v-for="index in 4" class="relative group flex" :key="index" :to="`/work/${index}`">
+    <NuxtLink v-for="index in 4" class="relative group flex" :key="index" :to="`/galleries/${index}`">
       <div class="flex flex-col">
         <!-- TODO: use nuxt-picture instead? -->
         <NuxtImg src="/test.jpg" />
@@ -9,3 +9,12 @@
     </NuxtLink>
   </div>
 </template>
+<script>
+export default {
+  setup() {
+    useHead({
+      title: 'Home',
+    });
+  },
+};
+</script>
