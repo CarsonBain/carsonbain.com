@@ -4,6 +4,7 @@
       <NuxtPicture
         width="1365"
         height="2048"
+        sizes="sm:100vw md:1365"
         provider="contentful"
         :loading="index === 0 ? 'eager' : 'lazy'"
         :src="images.fields.file.url"
