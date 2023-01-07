@@ -7,7 +7,6 @@
       :to="`/galleries/${index}`"
     >
       <div class="flex flex-col">
-        <!-- TODO: use nuxt-picture instead? -->
         <NuxtPicture
           preload
           provider="contentful"
@@ -19,29 +18,17 @@
         <div class="text-black text-2xl md:text-3xl font-semibold mt-6">— {{ gallery.fields.title }}</div>
       </div>
     </NuxtLink>
+    <pre>{{ data }}</pre>
   </div>
 </template>
-<script>
-export default {
-  setup() {
-    useHead({
-      title: 'Home',
-    });
-    const nuxtApp = useNuxtApp();
-    const galleries = ref([]);
-    onMounted(() => {
-      // TODO: what's this error about with unsafe headers? https://github.com/contentful/contentful.js/issues/422
-      nuxtApp.$contentful
-        .getEntries({ content_type: 'gallery' })
-        .then((response) => {
-          galleries.value = response.items;
-        })
-        .catch(console.error);
-    });
+<script setup>
+useHead({
+  title: 'Home',
+});
+const { getEntriesForContentType } = useEntries();
 
-    return {
-      galleries,
-    };
-  },
-};
+const { data: galleries } = await useAsyncData(async () => {
+  const data = await getEntriesForContentType('gallery');
+  return data;
+});
 </script>
