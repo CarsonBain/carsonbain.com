@@ -34,3 +34,13 @@
     </div>
   </div>
 </template>
+<script setup>
+// TODO: should this piece of state live here? maybe if it gets more complex abstract to a different file
+const allGalleries = useState('allGalleries', () => []);
+
+const { getEntriesForContentType } = useEntries();
+await useAsyncData(async () => {
+  const data = await getEntriesForContentType('gallery');
+  allGalleries.value = data;
+});
+</script>

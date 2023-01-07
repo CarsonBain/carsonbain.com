@@ -4,7 +4,7 @@
       v-for="(gallery, index) in galleries"
       class="relative group flex"
       :key="index"
-      :to="`/galleries/${index}`"
+      :to="`/galleries/${gallery.fields.slug}`"
     >
       <div class="flex flex-col">
         <NuxtPicture
@@ -24,10 +24,5 @@
 useHead({
   title: 'Home',
 });
-const { getEntriesForContentType } = useEntries();
-
-const { data: galleries } = await useAsyncData(async () => {
-  const data = await getEntriesForContentType('gallery');
-  return data;
-});
+const galleries = useState('allGalleries');
 </script>

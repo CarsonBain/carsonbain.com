@@ -1,22 +1,30 @@
 <template>
   <div class="flex flex-col space-y-12">
-    <NuxtLink v-for="index in 4" class="flex flex-col" :key="index" :to="`/galleries/${index}`">
-      <!-- TODO: use nuxt-picture instead? -->
-      <!-- TODO: add alts -->
-      <NuxtPicture loading="lazy" src="/test.jpg" />
-    </NuxtLink>
+    <div v-for="(images, index) in galleryImages" class="flex flex-col" :key="index">
+      <NuxtPicture
+        width="1365"
+        height="2048"
+        provider="contentful"
+        :loading="index === 0 ? 'eager' : 'lazy'"
+        :src="images.fields.file.url"
+      />
+    </div>
   </div>
 </template>
 
-<script>
-export default {
-  setup() {
-    useHead({
-      // TODO: replace with gallery title
-      title: 'Gallery',
-    });
-  },
+<script setup>
+useHead({
+  // TODO: replace with gallery title
+  title: 'Gallery',
+});
+const route = useRoute();
+const allGalleries = useState('allGalleries');
+const gallery = allGalleries.value.find((gallery) => {
+  return gallery.fields.slug === route.params.galleryId;
+});
+const galleryImages = gallery?.fields?.images ? gallery.fields.images : [];
+
+const log = () => {
+  console.log('hello');
 };
 </script>
-
-<style></style>
