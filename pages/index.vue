@@ -18,7 +18,6 @@
         <div class="text-black text-2xl md:text-3xl font-semibold mt-6">— {{ gallery.fields.title }}</div>
       </div>
     </NuxtLink>
-    <pre>{{ data }}</pre>
   </div>
 </template>
 <script setup>
