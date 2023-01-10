@@ -1,10 +1,16 @@
-# Nuxt 3 Minimal Starter
-
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+# Carson Bain Photography Portfolio
 
 ## Setup
 
+Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+
 Make sure to install the dependencies:
+
+Insure you're using > node 16:
+
+```bash
+nvm use 16
+```
 
 ```bash
 # yarn
