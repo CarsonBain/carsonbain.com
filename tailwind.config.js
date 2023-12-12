@@ -4,6 +4,7 @@ module.exports = {
     './components/**/*.{js,vue,ts}',
     './layouts/**/*.vue',
     './pages/**/*.vue',
+    './content/**/*.md',
     './plugins/**/*.{js,ts}',
     './nuxt.config.{js,ts}',
     './app.vue',
@@ -11,5 +12,5 @@ module.exports = {
   theme: {
     extend: {},
   },
-  plugins: [],
+  plugins: [require('@tailwindcss/typography')],
 };

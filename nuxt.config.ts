@@ -18,7 +18,7 @@ export default defineNuxtConfig({
       autoprefixer: {},
     },
   },
-  modules: ['@nuxt/image-edge'],
+  modules: ['@nuxt/image', '@nuxt/content'],
   runtimeConfig: {
     public: {
       contentfulSpaceId: process.env.CONTENTFUL_SPACE_ID,
@@ -30,4 +30,12 @@ export default defineNuxtConfig({
       baseUrl: 'https://cdn.contentful.com',
     },
   },
+  content: {
+    highlight: {
+      theme: {
+        default: 'nord',
+        dark: 'nord',
+      }
+    }
+  }
 });

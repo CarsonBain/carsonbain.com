@@ -24,8 +24,4 @@ const gallery = allGalleries.value.find((gallery) => {
   return gallery.fields.slug === route.params.galleryId;
 });
 const galleryImages = gallery?.fields?.images ? gallery.fields.images : [];
-
-const log = () => {
-  console.log('hello');
-};
 </script>
