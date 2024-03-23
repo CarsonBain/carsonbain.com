@@ -7,3 +7,46 @@ body,
 #__nuxt {
   min-height: 100vh;
 }
+
+/* Install scss if css nesting becomes a problem */
+.markdown-content {
+  @apply self-start text-sm flex flex-col gap-y-4 max-w-prose;
+
+  >div {
+    @apply flex flex-col gap-y-4 max-w-prose;
+  }
+  h1 {
+    @apply font-medium text-lg;
+  }
+ h2, h3, h4 {
+    @apply font-medium text-base mt-8;
+
+  }
+
+  strong {
+    @apply font-medium;
+  }
+
+  ul {
+    @apply list-disc list-inside;
+  }
+  ol {
+    @apply list-decimal list-inside;
+  }
+
+
+  code {
+    @apply bg-gray-100 border border-gray-200 text-xs rounded-sm px-1;
+  }
+
+  pre {
+    background-color: #0B0B09;
+    @apply rounded-md text-xs p-4;
+    overflow-x: scroll;
+
+    code {
+      @apply text-xs p-0 bg-transparent rounded-none border-none;
+    }
+  }
+
+}

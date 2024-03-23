@@ -1,5 +1,5 @@
 <template>
-  <div class="grid md:grid-cols-2 gap-12">
+  <div class="grid md:grid-cols-2 gap-6 md:gap-12">
     <NuxtPicture
       v-for="(image, index) in homePageImages"
       :key="index"

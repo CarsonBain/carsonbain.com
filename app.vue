@@ -1,24 +1,35 @@
 <template>
-  <div class="flex flex-col h-full min-h-screen">
+  <div class="flex flex-col h-full min-h-screen text-gray-950 text-sm">
     <div class="w-full max-w-screen-lg pt-10 pb-16 px-6 md:px-16 mx-auto flex flex-col flex-1">
       <header class="flex-grow-0 flex-shrink-0 basis-auto">
-        <nav class="flex justify-between items-center">
-          <NuxtLink class="font-extrabold text-xl md:text-3xl uppercase tracking-wide" to="/">Carson Bain</NuxtLink>
+        <nav class="flex justify-between items-center flex-wrap gap-x-4 gap-y-2">
+          <NuxtLink class="font-bold text-xl md:text-3xl uppercase tracking-wider shrink-0" to="/"
+            >Carson Bain</NuxtLink
+          >
           <div>
             <ul class="flex list-none space-x-3">
               <li>
                 <NuxtLink
-                  class="md:text-lg font-semibold py-1"
-                  activeClass="border-b-2 border-solid border-current"
+                  class="md:text-lg font-medium py-1"
+                  activeClass="border-b md:border-b-[1.5px] border-solid border-current"
                   to="/"
                 >
-                  Work
+                  Photograpy
                 </NuxtLink>
               </li>
               <li>
                 <NuxtLink
-                  class="md:text-lg font-semibold py-1"
-                  activeClass="border-b-2 border-solid border-current"
+                  class="md:text-lg font-medium py-1"
+                  activeClass="border-b md:border-b-[1.5px] border-solid border-current"
+                  to="/writing"
+                >
+                  Writing
+                </NuxtLink>
+              </li>
+              <li>
+                <NuxtLink
+                  class="md:text-lg font-medium py-1"
+                  activeClass="border-b md:border-b-[1.5px] border-solid border-current"
                   to="/about"
                 >
                   About
@@ -28,7 +39,7 @@
           </div>
         </nav>
       </header>
-      <main class="relative mt-8 md:mt-16 flex flex-col items-center flex-grow shrink-0 basis-auto">
+      <main class="relative mt-8 md:mt-16 flex flex-col items-start flex-grow shrink-0 basis-auto">
         <NuxtPage></NuxtPage>
       </main>
       <footer
@@ -43,6 +54,19 @@
   </div>
 </template>
 <script setup>
+useHead({
+  titleTemplate: '%s - Carson Bain',
+  meta: [{ name: 'description', content: "Carson Bain's personal site." }],
+});
+
+useSeoMeta({
+  title: 'Carson Bain',
+  ogTitle: 'Carson Bain',
+  description: "Carson Bain's personal site.",
+  ogDescription: "Carson Bain's personal site.",
+  // TODO: add other values here
+});
+
 // TODO: should this piece of state live here? maybe if it gets more complex abstract to a different file
 const allGalleries = useState('allGalleries', () => []);
 const homePageImages = useState('homePageImages', () => []);
