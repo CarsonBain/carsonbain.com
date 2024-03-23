@@ -1,9 +1,9 @@
-export default function useEntries() {
+export default function useAssets() {
   const nuxtApp = useNuxtApp();
-  const getEntriesForContentType = async (contentType) => {
+  const getAllAssets = async (options: any) => {
     // TODO: what's this error about with unsafe headers? https://github.com/contentful/contentful.js/issues/422
     return await nuxtApp.$contentful
-      .getEntries({ content_type: contentType })
+      .getAssets(options)
       .then((response) => {
         return response.items;
       })
@@ -11,6 +11,6 @@ export default function useEntries() {
   };
 
   return {
-    getEntriesForContentType,
+    getAllAssets,
   };
 }

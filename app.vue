@@ -66,15 +66,4 @@ useSeoMeta({
   ogDescription: "Carson Bain's personal site.",
   // TODO: add other values here
 });
-
-// TODO: should this piece of state live here? maybe if it gets more complex abstract to a different file
-const allGalleries = useState('allGalleries', () => []);
-const homePageImages = useState('homePageImages', () => []);
-const { getEntriesForContentType } = useEntries();
-await useAsyncData(async () => {
-  const data = await getEntriesForContentType('homePage');
-  homePageImages.value = data[0].fields.collageImages;
-  // const data = await getEntriesForContentType('gallery');
-  // allGalleries.value = data;
-});
 </script>
