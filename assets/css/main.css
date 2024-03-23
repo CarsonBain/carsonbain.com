@@ -45,7 +45,7 @@ body,
     overflow-x: scroll;
 
     code {
-      @apply text-xs p-0 bg-transparent rounded-none;
+      @apply text-xs p-0 bg-transparent rounded-none border-none;
     }
   }
 

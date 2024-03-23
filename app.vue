@@ -2,14 +2,14 @@
   <div class="flex flex-col h-full min-h-screen text-gray-950 text-sm">
     <div class="w-full max-w-screen-lg pt-10 pb-16 px-6 md:px-16 mx-auto flex flex-col flex-1">
       <header class="flex-grow-0 flex-shrink-0 basis-auto">
-        <nav class="flex justify-between items-center">
+        <nav class="flex justify-between items-center flex-wrap gap-x-4 gap-y-2">
           <NuxtLink class="font-bold text-xl md:text-3xl uppercase tracking-wider" to="/">Carson Bain</NuxtLink>
           <div>
             <ul class="flex list-none space-x-3">
               <li>
                 <NuxtLink
                   class="md:text-lg font-medium py-1"
-                  activeClass="border-b-[1.5px] border-solid border-current"
+                  activeClass="border-b md:border-b-[1.5px] border-solid border-current"
                   to="/"
                 >
                   Photograpy
@@ -18,7 +18,7 @@
               <li>
                 <NuxtLink
                   class="md:text-lg font-medium py-1"
-                  activeClass="border-b-[1.5px] border-solid border-current"
+                  activeClass="border-b md:border-b-[1.5px] border-solid border-current"
                   to="/writing"
                 >
                   Writing
@@ -27,7 +27,7 @@
               <li>
                 <NuxtLink
                   class="md:text-lg font-medium py-1"
-                  activeClass="border-b-[1.5px] border-solid border-current"
+                  activeClass="border-b md:border-b-[1.5px] border-solid border-current"
                   to="/about"
                 >
                   About
@@ -37,7 +37,7 @@
           </div>
         </nav>
       </header>
-      <main class="relative mt-8 md:mt-16 flex flex-col items-center flex-grow shrink-0 basis-auto">
+      <main class="relative mt-8 md:mt-16 flex flex-col items-start flex-grow shrink-0 basis-auto">
         <NuxtPage></NuxtPage>
       </main>
       <footer
