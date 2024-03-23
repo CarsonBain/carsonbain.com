@@ -5,8 +5,6 @@ createdAt: 2019-05-28
 category: 'software-development'
 ---
 
-# Building a Quick Order Form with the Shopify AJAX API
-
 This post will take you through the steps to add a quick order form page on your Shopify store. The form we will be adding allows users to quickly select quantities of items they would like to purchase, and then add all selected items to cart with one click.
 
 Using the [AJAX API](https://help.shopify.com/en/themes/development/getting-started/using-ajax-api) for this type of task will give us a large amount of flexibility in how we can add items to the cart.

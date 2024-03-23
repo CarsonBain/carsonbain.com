@@ -5,8 +5,6 @@ createdAt: 2019-05-28
 category: 'software-development'
 ---
 
-# Adding line item properties for personalization to your Shopify site
-
 For some products in your store, you may want to capture other form-like information from the customer such as custom monogram/engraving text or a choice of colour in which inventory doesn't need to be kept. These fields are called line item properties and can be used to allow customers to make choices or add information about a product.
 
 This post will take you through how to add line item properties to a new product page template, as well as how to make the names of these new properties customizable by adding them as [Theme Settings](https://help.shopify.com/en/manual/using-themes/change-the-layout/theme-settings). By the end of this post, you will have a product page with custom required inputs for colour and an optional monogram that will look something like this:

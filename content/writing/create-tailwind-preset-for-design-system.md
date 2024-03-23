@@ -5,8 +5,6 @@ createdAt: 2021-10-16
 category: 'software-development'
 ---
 
-# Use Tailwind Presets to share a design system between projects
-
 Recently at [Felix](https://www.felixforyou.ca) we've been working toward moving our main project's front end code out of a Laravel monolith, and into its own separate Nuxt project. We're hoping that by moving to this architecture, we can separate the front end and backend concerns, and also make the project more consistent since currently some of the views are written in templated PHP, some in Vue, etc...
 
 Something that we faced right away with this decision is that we won't just be able to move the whole application at once. There's lots of code that needs to be refactored and rewritten to support this new structure.

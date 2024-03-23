@@ -10,7 +10,7 @@ body,
 
 /* Install scss if css nesting becomes a problem */
 .markdown-content {
-  @apply self-start text-sm;
+  @apply self-start text-sm flex flex-col gap-y-4 max-w-prose;
 
   >div {
     @apply flex flex-col gap-y-4 max-w-prose;

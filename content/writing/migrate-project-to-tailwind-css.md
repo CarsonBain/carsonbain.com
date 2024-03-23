@@ -5,8 +5,6 @@ createdAt: 2021-02-20
 category: 'software-development'
 ---
 
-# How to (slowly) migrate your project to Tailwind CSS
-
 Over the last 8 months or so, I've really loved writing and organizing CSS with [Tailwind CSS](https://tailwindcss.com/). I've also found that using Tailwind in a project that has rather unorganised and hard to maintain CSS can be a really good strategy to get things back under control.
 
 **The main obstacles I faced in the codebase I was working on:**
