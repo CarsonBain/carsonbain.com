@@ -3,7 +3,9 @@
     <div class="w-full max-w-screen-lg pt-10 pb-16 px-6 md:px-16 mx-auto flex flex-col flex-1">
       <header class="flex-grow-0 flex-shrink-0 basis-auto">
         <nav class="flex justify-between items-center flex-wrap gap-x-4 gap-y-2">
-          <NuxtLink class="font-bold text-xl md:text-3xl uppercase tracking-wider" to="/">Carson Bain</NuxtLink>
+          <NuxtLink class="font-bold text-xl md:text-3xl uppercase tracking-wider shrink-0" to="/"
+            >Carson Bain</NuxtLink
+          >
           <div>
             <ul class="flex list-none space-x-3">
               <li>
