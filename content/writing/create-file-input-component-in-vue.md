@@ -1,5 +1,5 @@
 ---
-title: Creating a reusable file input component in Vue.js
+title: Creating a reusable file input component in Vue
 description: Sometimes it's nice to build components from scratch and not have to rely on component libraries so heavily. Let's walk through creating a reusable, accessible file input component that you can use in your own projects.
 createdAt: 2021-10-21
 category: 'software-development'

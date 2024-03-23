@@ -1,5 +1,5 @@
 ---
-title: How to (slowly) migrate your project to use Tailwind CSS
+title: How to (slowly) migrate your project to use Tailwind
 description: A 3 step strategy to help get a project's CSS back under control without having to re-write everything all at once.
 createdAt: 2021-02-20
 category: 'software-development'
