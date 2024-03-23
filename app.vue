@@ -54,6 +54,19 @@
   </div>
 </template>
 <script setup>
+useHead({
+  titleTemplate: '%s - Carson Bain',
+  meta: [{ name: 'description', content: "Carson Bain's personal site." }],
+});
+
+useSeoMeta({
+  title: 'Carson Bain',
+  ogTitle: 'Carson Bain',
+  description: "Carson Bain's personal site.",
+  ogDescription: "Carson Bain's personal site.",
+  // TODO: add other values here
+});
+
 // TODO: should this piece of state live here? maybe if it gets more complex abstract to a different file
 const allGalleries = useState('allGalleries', () => []);
 const homePageImages = useState('homePageImages', () => []);

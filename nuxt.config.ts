@@ -6,8 +6,6 @@ export default defineNuxtConfig({
       },
       charset: 'utf-8',
       viewport: 'width=device-width, initial-scale=1',
-      titleTemplate: '%s - Carson Bain',
-      meta: [{ name: 'description', content: "Carson Bain's personal site." }],
     },
   },
   css: ['~/assets/css/main.css'],
