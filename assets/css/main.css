@@ -40,7 +40,7 @@ body,
   }
 
   pre {
-    background-color: rgb(34, 39, 46);
+    background-color: #0B0B09;
     @apply rounded-md text-xs p-4;
     overflow-x: scroll;
 
