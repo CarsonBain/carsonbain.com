@@ -26,7 +26,7 @@ body,
   strong {
     @apply font-medium;
   }
-  
+
   ul {
     @apply list-disc list-inside;
   }
@@ -36,7 +36,7 @@ body,
 
 
   code {
-    @apply bg-gray-100 p-1 text-xs rounded-md;
+    @apply bg-gray-100 border border-gray-200 text-xs rounded-sm px-1;
   }
 
   pre {

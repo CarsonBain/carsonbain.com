@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col h-full min-h-screen text-gray-950">
+  <div class="flex flex-col h-full min-h-screen text-gray-950 text-sm">
     <div class="w-full max-w-screen-lg pt-10 pb-16 px-6 md:px-16 mx-auto flex flex-col flex-1">
       <header class="flex-grow-0 flex-shrink-0 basis-auto">
         <nav class="flex justify-between items-center">

@@ -190,6 +190,7 @@ export default {
 What you should end up with is the component from the [beginning of this post](#creating-a-reusable-file-input-component-in-vuejs). Give it a try for yourself, and check out the final code below! 🎉
 
 ```js [FileComponent.vue]
+// FileComponent.vue
 <template>
   <div>
     <input
@@ -250,6 +251,7 @@ input[type='file']:focus + .file-label {
 ```
 
 ```js [ParentComponent.vue]
+// ParentComponent.vue
 <template>
 <div>
   <img v-if="filePreview" :src="filePreview" alt="fileName" style="max-height: 256px">

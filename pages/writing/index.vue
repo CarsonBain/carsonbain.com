@@ -2,7 +2,7 @@
   <ContentList path="/writing" v-slot="{ list }">
     <div class="w-full flex flex-col gap-y-8 md:gap-y-8">
       <NuxtLink v-for="article in list" :key="article._path" :to="article._path">
-        <h2 class="font-medium">{{ article.title }}</h2>
+        <h2 class="font-medium text-base">{{ article.title }}</h2>
         <p class="text-xs mt-1 flex gap-x-2 items-center">
           <span>
             {{ article.createdAt.slice(0, 10) }}
