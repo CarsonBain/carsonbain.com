@@ -1,7 +1,7 @@
 <template>
   <div class="self-start">
     <p class="max-w-prose">
-      Carson Bain is a software developer and a photographer from Toronto, Ontario. Currently he is building accessible
+      Carson Bain is a software developer and a photographer from Toronto, Ontario. Currently he's building accessible
       healthcare products at
       <a class="underline" href="https://www.felixforyou.ca/" target="_blank">Felix</a>.
     </p>
