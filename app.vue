@@ -9,7 +9,7 @@
               <li>
                 <NuxtLink
                   class="md:text-lg font-medium py-1"
-                  activeClass="border-b-2 border-solid border-current"
+                  activeClass="border-b-[1.5px] border-solid border-current"
                   to="/"
                 >
                   Photograpy
@@ -18,7 +18,7 @@
               <li>
                 <NuxtLink
                   class="md:text-lg font-medium py-1"
-                  activeClass="border-b-2 border-solid border-current"
+                  activeClass="border-b-[1.5px] border-solid border-current"
                   to="/writing"
                 >
                   Writing
@@ -27,7 +27,7 @@
               <li>
                 <NuxtLink
                   class="md:text-lg font-medium py-1"
-                  activeClass="border-b-2 border-solid border-current"
+                  activeClass="border-b-[1.5px] border-solid border-current"
                   to="/about"
                 >
                   About
