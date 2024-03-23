@@ -3,9 +3,7 @@
     <p class="max-w-prose">
       Carson Bain is a software developer and a photographer from Toronto, Ontario. Currently he is building accessible
       healthcare products at
-      <a class="underline" href="https://www.felixforyou.ca/" target="_blank">Felix</a>, and some of his writing on
-      software development can be found on his
-      <a class="underline" href="https://dev.carsonbain.com/blog" target="_blank">blog</a>.
+      <a class="underline" href="https://www.felixforyou.ca/" target="_blank">Felix</a>.
     </p>
     <p class="mt-4">
       <a class="flex space-x-2 items-center underline" href="mailto:carsonbain@gmail.com">
