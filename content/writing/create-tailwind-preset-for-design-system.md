@@ -1,5 +1,5 @@
 ---
-title: Use Tailwind Presets to share a design system between projects
+title: Use Tailwind presets to share a design system between projects
 description: Sometimes you will have multiple projects that need to share the same design system or styles. If you're using Tailwind CSS, this can be achieved through Presets, allowing you to manage the system in one spot and deploy to your various projects.
 createdAt: 2021-10-16
 category: 'software-development'
