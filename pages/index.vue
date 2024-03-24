@@ -1,17 +1,19 @@
 <template>
   <div v-if="homePageImages.length" class="grid md:grid-cols-2 gap-6 md:gap-12">
     <NuxtPicture
-      v-for="(image, index) in homePageImages"
-      :key="index"
+      v-for="image in homePageImages"
+      :key="image.fields.file.url"
       preload
       provider="contentful"
       :src="image.fields.file.url"
       sizes="sm:100vw md:848px"
       width="848"
       height="1242"
+      :class="imageLoadedStatuses[image.fields.file.url] ? 'opacity-100' : 'opacity-0'"
+      class="transition-opacity duration-300 ease-in-out"
+      @load="setLoadedStatus(image.fields.file.url)"
     />
-    <!-- TODO: spinner? -->
-    <div v-if="!allLoaded" id="trigger">Trigger</div>
+    <div id="loadMoreTrigger"></div>
   </div>
 </template>
 <script setup>
@@ -22,14 +24,23 @@ useHead({
 const homePageImages = ref([]);
 const skip = ref(0);
 const limit = ref(10);
-const allLoaded = ref(false);
+const allDataHasLoaded = ref(false);
+const imageLoadedStatuses = ref({});
+let observer = null;
 
 const { getAllAssets } = useAssets();
+
+const setLoadedStatus = (key) => {
+  imageLoadedStatuses.value[key] = true;
+};
+
 const { data } = await useAsyncData(
   async () => {
     return await getAllAssets({
       skip: skip.value,
       limit: limit.value,
+      // TODO: Order by sys.id just to make things random?
+      order: 'sys.id',
     });
   },
   {
@@ -46,17 +57,17 @@ watch(
       homePageImages.value = [...copy, ...data.value];
     } else {
       // Assume we got to the end here. Assign a boolean to stop the observer on the next run
-      allLoaded.value = true;
+      allDataHasLoaded.value = true;
     }
   },
   { immediate: true }
 );
 
-onBeforeMount(() => {
-  const observer = new IntersectionObserver((entries) => {
+onMounted(() => {
+  observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
-        if (allLoaded.value) {
+        if (allDataHasLoaded.value) {
           observer.disconnect();
           return;
         }
@@ -65,9 +76,26 @@ onBeforeMount(() => {
     });
   });
 
-  const lastImage = document.querySelector('#trigger');
+  const lastImage = document.querySelector('#loadMoreTrigger');
   if (lastImage) {
     observer.observe(lastImage);
   }
 });
+
+onBeforeUnmount(() => {
+  if (observer) {
+    observer.disconnect();
+  }
+});
 </script>
+<style>
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.5s;
+}
+
+.fade-enter,
+.fade-leave-to {
+  opacity: 0;
+}
+</style>

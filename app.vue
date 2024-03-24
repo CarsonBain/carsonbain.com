@@ -40,7 +40,8 @@
         </nav>
       </header>
       <main class="relative mt-8 md:mt-16 flex flex-col items-start flex-grow shrink-0 basis-auto">
-        <NuxtPage></NuxtPage>
+        <!-- Using keep alive mostly to persist state of photo gallery depending on where a person has scrolled to -->
+        <NuxtPage keepalive></NuxtPage>
       </main>
       <footer
         class="mt-16 text-xs text-gray-700 flex-grow-0 flex-shrink-0 basis-auto flex flex-col items-center space-y-2"
