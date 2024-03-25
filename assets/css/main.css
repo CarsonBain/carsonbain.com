@@ -34,6 +34,12 @@ body,
     @apply list-decimal list-inside;
   }
 
+  p {
+    a {
+      @apply underline;
+    }
+  }
+
 
   code {
     @apply bg-gray-100 border border-gray-200 text-xs rounded-sm px-1;
