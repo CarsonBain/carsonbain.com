@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col h-full min-h-screen text-gray-950 text-sm">
+  <div class="flex flex-col h-full min-h-dvh text-gray-950 text-sm">
     <div class="w-full max-w-screen-lg pt-10 pb-16 px-6 md:px-16 mx-auto flex flex-col flex-1">
       <header class="flex-grow-0 flex-shrink-0 basis-auto">
         <nav class="flex justify-between items-center flex-wrap gap-x-4 gap-y-2">
@@ -47,9 +47,6 @@
         class="mt-16 text-xs text-gray-700 flex-grow-0 flex-shrink-0 basis-auto flex flex-col items-center space-y-2"
       >
         <p>© {{ new Date().getFullYear() }} Carson Bain</p>
-        <p>
-          <a class="underline" target="_blank" href="https://www.instagram.com/carsonbain/"> @carsonbain</a>
-        </p>
       </footer>
     </div>
   </div>
